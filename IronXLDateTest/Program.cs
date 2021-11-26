@@ -16,7 +16,6 @@ namespace IronXLDateTest
             var employees = employeeManager.GetEmployees();
             var dataTable = employeeManager.GetDataTableFromCollection(employees);
             var file = employeeManager.CreateFileXls(dataTable);
-            string path = System.Reflection.Assembly.GetExecutingAssembly().Location;
             System.IO.File.WriteAllBytes($@"{System.IO.Path.GetTempPath()}Filename.xls", file);
         }
 
